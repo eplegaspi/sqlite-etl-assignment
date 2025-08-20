@@ -42,7 +42,7 @@ def run_sql_solution(db_path, out_path):
     WHERE Customers.age BETWEEN 18 AND 35
     GROUP BY Customers.customer_id, Items.item_id, Items.item_name
     HAVING SUM(COALESCE(Orders.quantity, 0)) > 0
-    ORDER BY Customers.customer_id, Items.item_name
+    ORDER BY Customers.customer_id, Customers.age, Items.item_name
     """
     cur.execute(sql)
     rows = cur.fetchall()
