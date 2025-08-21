@@ -40,7 +40,7 @@ def run_sql_solution(db_path, out_path):
         ON Items.item_id
         = Orders.item_id
     WHERE Customers.age BETWEEN 18 AND 35
-    GROUP BY Customers.customer_id, Items.item_id, Items.item_name
+    GROUP BY Customers.customer_id, Customers.age, Items.item_id, Items.item_name
     HAVING SUM(COALESCE(Orders.quantity, 0)) > 0
     ORDER BY Customers.customer_id, Customers.age, Items.item_name
     """

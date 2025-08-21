@@ -1,0 +1,9 @@
+eastvantage_dbt:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: ./eastvantage.duckdb   # file dbt will manage
+      threads: 4
+      extensions:
+        - sqlite

@@ -1,2 +1,11 @@
 .idea.idea/
 .idea/*
+
+# dbt artifacts
+target/
+dbt_packages/
+logs/
+manifest.json
+run_results.json
+sources.json
+catalog.json
